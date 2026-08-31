@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Data Analytics Dashboard</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <header class="header">
+
+        <div class="header-icon">
+            📊
+        </div>
+
+        <div>
+
+            <h1>
+                Data Analytics Dashboard
+            </h1>
+
+            <p>
+                Customer, Student & Hospital Analytics
+            </p>
+
+        </div>
+
+    </header>
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                👥
+            </div>
+
+            <div>
+
+                <p>
+                    Total Customers
+                </p>
+
+                <h3 id="totalCustomers">
+                    0
+                </h3>
+
+                <span>
+                    All age groups
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                🎂
+            </div>
+
+            <div>
+
+                <p>
+                    Largest Age Group
+                </p>
+
+                <h3 id="largestAge">
+                    -
+                </h3>
+
+                <span id="largestAgeCount">
+                    0 customers
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                📚
+            </div>
+
+            <div>
+
+                <p>
+                    Average Score
+                </p>
+
+                <h3 id="averageScore">
+                    0
+                </h3>
+
+                <span>
+                    Student test scores
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                🏥
+            </div>
+
+            <div>
+
+                <p>
+                    Total Admissions
+                </p>
+
+                <h3 id="totalAdmissions">
+                    0
+                </h3>
+
+                <span>
+                    2018 - 2022
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    👥 Customer Demographics
+                </h2>
+
+                <p>
+                    Age Group Distribution
+                </p>
+
+            </div>
+
+            <div class="badge">
+                BAR CHART
+            </div>
+
+        </div>
+
+        <div id="ageChart"></div>
+
+    </section>
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    📚 Student Test Scores
+                </h2>
+
+                <p>
+                    Relationship Between Study Hours and Test Score
+                </p>
+
+            </div>
+
+            <div class="badge">
+                SCATTER PLOT
+            </div>
+
+        </div>
+
+        <div id="studentChart"></div>
+
+    </section>
+
+    <section class="card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    🏥 Hospital Patient Admissions
+                </h2>
+
+                <p>
+                    Patient Admissions by Department Over Time
+                </p>
+
+            </div>
+
+            <div class="badge">
+                STACKED AREA
+            </div>
+
+        </div>
+
+        <div id="hospitalChart"></div>
+
+        <div
+            id="hospitalLegend"
+            class="legend"
+        ></div>
+
+    </section>
+
+
+</div>
+
+<div
+    id="tooltip"
+    class="tooltip"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
